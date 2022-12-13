@@ -1,0 +1,48 @@
+@import "../../index.scss";
+
+.header {
+  max-width: 100vw;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .header-left {
+    @include flexCenter();
+
+    a {
+      padding: 0px 15px;
+      color: $grayish-purple;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        color: $very-dark-purple;
+      }
+    }
+
+    img {
+      margin-right: 30px;
+    }
+  }
+
+  .header-right {
+    @include flexCenter();
+
+    button {
+      color: $grayish-purple;
+      padding: 7px 15px;
+      border: none;
+      border-radius: 20px;
+      margin: 15px;
+      transition: $transition;
+      cursor: pointer;
+      font-size: 18px;
+
+      &:hover {
+        background-color: $cyan;
+        color: white;
+      }
+    }
+  }
+}
