@@ -28,21 +28,46 @@
 
   .header-right {
     @include flexCenter();
+  }
+}
 
-    button {
-      color: $grayish-purple;
-      padding: 7px 15px;
-      border: none;
-      border-radius: 20px;
-      margin: 15px;
-      transition: $transition;
-      cursor: pointer;
-      font-size: 18px;
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: $grayish-purple;
+  font-size: 25px;
+}
 
-      &:hover {
-        background-color: $cyan;
-        color: white;
-      }
+.mobile-href {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header-href {
+    display: none;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .mobile-href {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $dark-violet;
+    color: white;
+    width: 90vw;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+
+    a {
+      padding: 10px;
     }
   }
 }
