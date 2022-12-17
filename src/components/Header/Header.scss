@@ -90,6 +90,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     background-color: $dark-violet;
     color: white;
     width: 90vw;
@@ -99,6 +100,27 @@
 
     a {
       padding: 10px;
+    }
+
+    .a-cyan {
+      background-color: $cyan;
+      color: white;
+      padding: 7px 15px;
+      border: none;
+      border-radius: 20px;
+      margin: 15px;
+      transition: $transition;
+      cursor: pointer;
+      font-size: 18px;
+      width: 80%;
+    }
+
+    hr {
+      height: 1px;
+      border: none;
+      color: hsl(254, 11%, 46%);
+      background-color: hsl(254, 11%, 46%);
+      width: 90%;
     }
   }
 }

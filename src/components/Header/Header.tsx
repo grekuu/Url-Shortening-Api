@@ -29,6 +29,9 @@ const Header = () => {
           <a>Features</a>
           <a>Pricing</a>
           <a>Resources</a>
+          <hr />
+          <a>Login</a>
+          <a className="a-cyan">Sign Up</a>
         </div>
       ) : (
         <div></div>
