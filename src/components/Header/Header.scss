@@ -28,6 +28,31 @@
 
   .header-right {
     @include flexCenter();
+
+    button {
+      color: $grayish-purple;
+      padding: 7px 15px;
+      border: none;
+      border-radius: 20px;
+      margin: 15px;
+      transition: $transition;
+      cursor: pointer;
+      font-size: 18px;
+
+      &:hover {
+        background-color: $cyan;
+        color: white;
+      }
+    }
+
+    .button-cyan {
+      background-color: $cyan;
+      color: white;
+
+      &:hover {
+        background-color: hsl(180, 43%, 63%);
+      }
+    }
   }
 }
 
@@ -53,6 +78,12 @@
 
   .header {
     justify-content: space-between;
+  }
+
+  .header-right {
+    button {
+      display: none;
+    }
   }
 
   .mobile-href {

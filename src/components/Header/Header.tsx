@@ -20,6 +20,8 @@ const Header = () => {
             className="hamburger"
             onClick={() => setHamburgetActive(!hamburgetActive)}
           ></FaBars>
+          <button>Login</button>
+          <button className="button-cyan">Sign Up</button>
         </div>
       </div>
       {hamburgetActive ? (
