@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.home-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-top-left {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 40%;
+
+  .title {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    color: $grayish-purple;
+  }
+
+  button {
+    background-color: $cyan;
+    color: white;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px;
+    transition: $transition;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 50%;
+
+    &:hover {
+      background-color: hsl(180, 43%, 63%);
+    }
+  }
+}
+
+.home-top-right {
+  max-width: 40%;
+}

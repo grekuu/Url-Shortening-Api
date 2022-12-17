@@ -2,12 +2,13 @@ import "./Header.scss";
 import logo from "../../images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import Container from "react-bootstrap/Container";
 
 const Header = () => {
   const [hamburgetActive, setHamburgetActive] = useState<Boolean>(false);
 
   return (
-    <>
+    <Container>
       <div className="header">
         <div className="header-left">
           <img src={logo} alt="logo" />
@@ -36,7 +37,7 @@ const Header = () => {
       ) : (
         <div></div>
       )}
-    </>
+    </Container>
   );
 };
 
