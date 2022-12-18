@@ -18,6 +18,11 @@ const Home = () => {
           <img src={working} alt="working" />
         </div>
       </div>
+
+      <div className="home-mid">
+        <input type="text" placeholder="Shorten a link here..." />
+        <button className="button-cyan-mid">Shorten it!</button>
+      </div>
     </Container>
   );
 };
