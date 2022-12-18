@@ -42,4 +42,35 @@
 
 .home-top-right {
   max-width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 998px) {
+  .home-top {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+  }
+
+  .home-top-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+    order: 1;
+    margin-left: 125px;
+    clear: right;
+  }
+
+  .home-top-left {
+    max-width: 100vw;
+    order: 2;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-top-right > img {
+    max-width: 100vw;
+  }
 }
