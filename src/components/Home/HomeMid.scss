@@ -1,0 +1,165 @@
+@import "../../index.scss";
+
+.home-mid {
+  margin: 50px 0px;
+  background-image: url("../../images/bg-shorten-desktop.svg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $dark-violet;
+  height: auto;
+  border-radius: 10px;
+  padding: 50px 10px;
+
+  @include flexCenter();
+  justify-content: center;
+
+  input {
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 70%;
+    outline: none;
+    margin: 0px 7px;
+  }
+}
+
+.button-cyan-mid {
+  background-color: $cyan;
+  color: white;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 5px;
+  transition: $transition;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0px 7px;
+  white-space: nowrap;
+  text-align: center;
+
+  &:hover {
+    background-color: hsl(180, 43%, 63%);
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  .home-mid {
+    flex-direction: column;
+
+    input {
+      width: 90%;
+    }
+  }
+  .button-cyan-mid {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
+
+.home-bottom-mid {
+  margin-bottom: 50px;
+
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .description {
+    color: $grayish-purple;
+    text-align: center;
+  }
+
+  .three-logos {
+    display: flex;
+    .logo {
+      max-width: 30%;
+      display: flex;
+      flex-direction: row !important;
+      justify-content: space-between;
+      margin-left: 40px;
+
+      .logo-background {
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        background-color: $dark-violet;
+        @include flexCenter();
+        justify-content: center;
+      }
+
+      img {
+        padding: 20px;
+      }
+
+      .logo-title {
+        font-weight: 700;
+        font-size: 20px;
+        margin: 10px 0px;
+      }
+
+      .logo-description {
+        color: $grayish-purple;
+      }
+
+      .logo-hr {
+        height: 2px;
+        border: none;
+        color: $cyan;
+        background-color: $cyan;
+        width: 40px;
+        height: 10px;
+      }
+
+      .center-hr {
+        @include flexCenter();
+      }
+    }
+  }
+  .logo-1 {
+    margin-top: 50px;
+  }
+  .logo-2 {
+    margin-top: 100px;
+  }
+  .logo-3 {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  .home-bottom-mid {
+    .three-logos {
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        max-width: 90%;
+        justify-content: center;
+        margin-left: 0;
+      }
+
+      .logo-left {
+        @include flexCenter();
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .logo-1 {
+      margin-top: 50px;
+    }
+    .logo-2 {
+      margin-top: 50px;
+    }
+    .logo-3 {
+      margin-top: 50px;
+    }
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
