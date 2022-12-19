@@ -39,7 +39,7 @@
   text-align: center;
 
   &:hover {
-    background-color: hsl(180, 43%, 63%);
+    background-color: #9be3e2;
   }
 }
 
@@ -115,6 +115,7 @@
 
       .center-hr {
         @include flexCenter();
+        margin: 10px;
       }
     }
   }

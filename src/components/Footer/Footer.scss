@@ -1,0 +1,84 @@
+@import "../../index.scss";
+
+.footer-top {
+  width: 100vw;
+  padding: 30px;
+  background-image: url("../../images/bg-boost-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $dark-violet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  button {
+    background-color: $cyan;
+    color: white;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px;
+    transition: $transition;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    width: auto;
+
+    &:hover {
+      background-color: #9be3e2;
+    }
+  }
+}
+
+.boost {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.footer-bottom {
+  background-color: $very-dark-purple;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+
+  .links {
+    display: flex;
+    .column {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 20px;
+      font-size: 13px;
+
+      p {
+        color: white;
+      }
+
+      a {
+        color: $grayish-purple;
+        cursor: pointer;
+        text-decoration: none;
+        transition: $transition;
+        margin: 3px 0px;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+
+  .social {
+    margin: 0px 10px;
+    color: white;
+    font-size: 25px;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+}
