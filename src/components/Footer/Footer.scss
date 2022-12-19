@@ -82,3 +82,23 @@
     }
   }
 }
+
+@media only screen and (max-width: 998px) {
+  .footer-bottom {
+    @include flexCenter();
+    flex-direction: column;
+
+    .links {
+      flex-direction: column;
+      text-align: center;
+
+      p {
+        margin: 20px 0px;
+      }
+    }
+
+    .social {
+      margin: 10px 0px;
+    }
+  }
+}
