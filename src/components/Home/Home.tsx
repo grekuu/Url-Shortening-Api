@@ -5,8 +5,21 @@ import working from "../../images/illustration-working.svg";
 import logo1 from "../../images/icon-brand-recognition.svg";
 import logo2 from "../../images/icon-detailed-records.svg";
 import logo3 from "../../images/icon-fully-customizable.svg";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { fetchAsyncURL, getAllUrls } from "../../redux/urlSlice";
+import { useState } from "react";
 
 const Home = () => {
+  const dispatch = useAppDispatch();
+  const urls = useAppSelector(getAllUrls);
+
+  const [urlToConvert, setUrlToConvert] = useState<string>("");
+
+  function shortenLink() {
+    dispatch(fetchAsyncURL(urlToConvert));
+    console.log(urls);
+  }
+
   return (
     <Container>
       <div className="home-top">
@@ -24,8 +37,24 @@ const Home = () => {
       </div>
 
       <div className="home-mid">
-        <input type="text" placeholder="Shorten a link here..." />
-        <button className="button-cyan-mid">Shorten it!</button>
+        <input
+          type="text"
+          placeholder="Shorten a link here..."
+          onChange={(e) => setUrlToConvert(e.target.value)}
+        />
+        <button className="button-cyan-mid" onClick={shortenLink}>
+          Shorten it!
+        </button>
+      </div>
+
+      <div className="shorterUrls">
+        {urls.map((url) => {
+          return (
+            <div>
+              <p>{url.full_short_link}</p> <button>Copy</button>
+            </div>
+          );
+        })}
       </div>
 
       <div className="home-bottom-mid">
