@@ -17,7 +17,6 @@ const Home = () => {
 
   function shortenLink() {
     dispatch(fetchAsyncURL(urlToConvert));
-    console.log(urls);
   }
 
   return (
@@ -47,11 +46,18 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="shorterUrls">
-        {urls.map((url) => {
+      <div>
+        {urls.map((url, id) => {
           return (
-            <div>
-              <p>{url.full_short_link}</p> <button>Copy</button>
+            <div className="shorterUrls" key={id}>
+              <div>{url.full_short_link}</div>
+              <button
+                onClick={() =>
+                  navigator.clipboard.writeText(`${urls[id].full_short_link}`)
+                }
+              >
+                Copy
+              </button>
             </div>
           );
         })}
